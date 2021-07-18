@@ -18,7 +18,7 @@ async def MergeVideo(input_file: str, user_id: int, message: Message, format_: s
     :return: This will return Merged Video File Path
     """
 
-    output_vid = f"{Config.DOWN_PATH}/{str(user_id)}/[@AbirHasan2005]_Merged.{format_.lower()}"
+    output_vid = f"{Config.DOWN_PATH}/{str(user_id)}/[SDFVideoMergeBot]_Merged.{format_.lower()}"
     file_generator_command = [
         "ffmpeg",
         "-f",
@@ -40,7 +40,7 @@ async def MergeVideo(input_file: str, user_id: int, message: Message, format_: s
         )
     except NotImplementedError:
         await message.edit(
-            text="Unable to Execute FFmpeg Command! Got `NotImplementedError` ...\n\nPlease run bot in a Linux/Unix Environment."
+            text="Unable to Execute FFmpeg Command! Got `NotImplementedError` ..."
         )
         await asyncio.sleep(10)
         return None
