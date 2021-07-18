@@ -356,7 +356,7 @@ async def callback_handlers(bot: Client, cb: CallbackQuery):
         await cb.message.edit(
             text=Config.START_TEXT,
             parse_mode="Markdown",
-            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Support Group", url="https://t.me/linux_repo")]]),
+            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Support Group", url="https://t.me/SDFBots")]]),
             disable_web_page_preview=True
         )
     elif "showThumbnail" in cb.data:
